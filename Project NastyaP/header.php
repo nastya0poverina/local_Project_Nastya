@@ -16,14 +16,14 @@ _INIT;
 
   require_once 'functions.php';
 
-  $userstr = 'Welcome Guest';
+  $userstr = 'Добро пожаловать';
   $randstr = substr(md5(rand()), 0, 7);
 
   if (isset($_SESSION['user']))
   {
     $user     = $_SESSION['user'];
     $loggedin = TRUE;
-    $userstr  = "Logged in as: $user";
+    $userstr  = "Зарегистрированы как: $user";
   }
   else $loggedin = FALSE;
 
@@ -33,7 +33,6 @@ echo <<<_MAIN
   <body>
     <div data-role='page'>
       <div data-role='header'>
-        <div id='logo' class='center'>R<img id='robin' src='robin.gif'>bin's Nest</div>
         <div class='username'>$userstr</div>
       </div>
       <div data-role='content'>
@@ -62,11 +61,11 @@ _LOGGEDIN;
 echo <<<_GUEST
         <div class='center'>
           <a data-role='button' data-inline='true' data-icon='home'
-            data-transition='slide' href='index.php?r=$randstr''>Home</a>
+            data-transition='slide' href='index.php?r=$randstr''>Главная страница</a>
           <a data-role='button' data-inline='true' data-icon='plus'
-            data-transition="slide" href='signup.php?r=$randstr''>Sign Up</a>
+            data-transition="slide" href='signup.php?r=$randstr''>Войти</a>
           <a data-role='button' data-inline='true' data-icon='check'
-            data-transition="slide" href='login.php?r=$randstr''>Log In</a>
+            data-transition="slide" href='login.php?r=$randstr''>Зарегистрироваться</a>
         </div>
         <p class='info'>(Пользователь должен быть зарегистрирован)</p>
         
