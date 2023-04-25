@@ -5,12 +5,12 @@ $db_user = 'project_user';
 $db_password = 'project_password';
 
 $connect = new mysqli($db_host, $db_user, $db_password, $db_name);
-if ($connect->connect_error) die("Fatal Error");
+if ($connect->connect_error) die("Fatal Error connect to sql");
 
 function queryMysql($query) {
     global $connect;
     $result = $connect->query($query);
-    if (!$result) die("Fatal Eror");
+    if (!$result) die("Fatal Eror get to sql");
     return $result;
 }
 

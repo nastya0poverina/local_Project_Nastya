@@ -37,7 +37,7 @@
         </div>
         <div data-role='fieldcontain'>
           <label>Пароль</label>
-          <input type='password' maxlength='16' name='pass' value='$password'>
+          <input type='password' maxlength='16' name='password' value='$password'>
         </div>
         <div data-role='fieldcontain'>
           <label></label>
